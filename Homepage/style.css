@@ -1,0 +1,664 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #ffffff;
+    color: #000000;
+    user-select: none;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: -10vh;
+    background: #000000;
+}
+
+.contact-me-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh;
+    font-size: 40px;
+}
+
+.background {
+    position: fixed;
+    right: 0;
+    left: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    object-fit: fill;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.home .home-content p {
+    color: #808080;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.logo {
+    position: relative;
+    font-size: 30px;
+    color: #4d4444;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #7e7878;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #000000;
+}
+
+.home {
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home-content h3 {
+    position: absolute;
+    bottom: 50%;
+    right: 15%;
+    font-size: 90px;
+    font-weight: 1000;
+    color: #808080;
+    text-shadow: 0 0 140px #b4b4b4;
+    z-index: 100;
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 20px;
+}
+
+.home-content .btn-box {
+    display:flex;
+    justify-content: space-between;
+    width: 420px;
+    height: 40px;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100%;
+    background: #808080;
+    border: 2px solid #808080;
+    border-radius: 6px;
+    font-size: 15.5px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: .5px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.btn-box a:hover {
+    color:#808080;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color:#808080;
+}
+
+.btn-box a:nth-child(2):hover {
+    color: #000000;
+}
+
+.btn-box a:nth-child(2)::before {
+    background: #808080;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ffffff;
+    z-index: -1;
+    transition: .3s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #808080;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #808080;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.home-sci a:hover {
+    color: #000000;
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #808080;
+    z-index: -1;
+    transition: .3s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+.contact-me a {
+    position: absolute;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 5%;
+    right: 5%;
+    width: 200px;
+    height: 5%;
+    background: #808080;
+    border: 2px solid #808080;
+    border-radius: 6px;
+    font-size: 15.5px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: .5px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.contact-me a:hover {
+    color:#808080;
+}
+
+.contact-me a:nth-child(2) {
+    background: transparent;
+    color:#808080;
+}
+
+.contact-me a:nth-child(2):hover {
+    color: #000000;
+}
+
+.contact-me a:nth-child(2)::before {
+    background: #808080;
+}
+
+.contact-me a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ffffff;
+    z-index: -1;
+    transition: .3s;
+}
+
+.contact-me a:hover::before {
+    width: 100%;
+}
+
+.back a {
+    position: absolute;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 5%;
+    right: 5%;
+    width: 200px;
+    height: 5%;
+    background: #808080;
+    border: 2px solid #808080;
+    border-radius: 6px;
+    font-size: 15.5px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: .5px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.back a:hover {
+    color:#808080;
+}
+
+.back a:nth-child(1) {
+    background: transparent;
+    color:#808080;
+}
+
+.back a:nth-child(1):hover {
+    color: #000000;
+}
+
+.back a:nth-child(1)::before {
+    background: #808080;
+}
+
+.back a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #000000;.popup-text {
+    margin-top: 20px; /* Adjust the margin to move the text down */
+}
+
+#continueButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #7289da;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center; /* Align items vertically */
+    text-decoration: none;
+}
+
+#continueButton:hover {
+    background-color: #8a9cdd;
+}
+
+#continueButton .disc_logo {
+    height: 22px;
+    margin-right: 10px; /* Space between the logo and text */
+}
+
+.popup-content {
+    background-color: var(--modal-bg-color);
+    margin: 10% auto; /* Adjust margin to move the popup down */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%; /* Increase width */
+    height: 20%; /* Increase height */
+    max-width: 800px; /* Maximum width */
+    max-height: 600px; /* Maximum height */
+    border-radius: 8px;
+    position: relative;
+    text-align: center;
+    animation: slideDown 0.5s; /* Smooth animation for showing the modal */
+}
+    z-index: -1;
+    transition: .3s;
+}
+
+.back a:hover::before {
+    width: 100%;
+}
+/* Right box */
+.right-box {
+    width: 650px; /* Adjust the width as needed */
+    padding: 20px;
+    background-color: #313338;
+    border: 1px solid #313338;
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, .5, .70, 1); /* Shadow */
+    user-select: none;
+    position: absolute; /* Set position to absolute */
+    right: 5%; /* Adjust the value to move it more to the right */
+    top: 28%; /* Start from the top */
+    opacity: 0;
+    animation: fallFromTop 1s ease forwards; /* Apply the animation */
+}
+
+
+/* Text box */
+.text-box {
+    width: calc(100% - 120px); /* Adjust the width of the text box */
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border-color: #313338;
+    background-color: #464850; /* Background color of the text box */
+    color: #fff; /* Text color */
+    user-select: none; /* Disable text selection */
+}
+
+/* Placeholder color */
+.text-box::placeholder {
+    color: #6b6e77;
+}
+
+/* Focus state */
+.text-box:focus {
+    border-color: #313338; /* Custom border color on focus */
+    background-color: #464850; /* Maintain background color on focus */
+}
+
+/* Send button */
+.send-btn {
+    width: 100px; /* Adjust the width of the button */
+    padding: 10px; /* Add padding */
+    margin-left: 10px; /* Add space between the text box and the button */
+    background-color: #7289da; /* Blurple color */
+    color: #fff; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor style */
+    transition: background-color 0.3s ease; /* Transition effect */
+}
+
+/* Hover state */
+.send-btn:hover {
+    background-color: #5865f2; /* Darker Blurple color on hover */
+}
+
+:root {
+    --modal-bg-color: white; /* Default modal background color */
+    --button-hover-color: #5a5a5a; /* Default button hover color */
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.5s; /* Smooth animation for showing the modal */
+}
+
+.popup-content {
+    background-color: var(--modal-bg-color);
+    margin: 18% auto; /* Adjust margin to move the popup down */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%; /* Increase width */
+    height: 20%; /* Increase height */
+    max-width: 800px; /* Maximum width */
+    max-height: 600px; /* Maximum height */
+    border-radius: 8px;
+    position: relative;
+    text-align: center;
+    animation: slideDown 0.5s; /* Smooth animation for showing the modal */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-30%); }
+    to { transform: translateY(0); }
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#continueButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #7289da;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center; /* Align items vertically */
+    text-decoration: none;
+}
+
+#continueButton:hover {
+    background-color: #8a9cdd;
+}
+
+#continueButton .disc_logo {
+    height: 22px;
+    margin-right: 10px; /* Space between the logo and text */
+}
+
+/* Adjust text-box and send-button positioning */
+.right-box .text-box {
+    width: calc(100% - 100px); /* Adjust width to fit the button next to it */
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -4px; /* Adjust margin to move text box up */
+}
+
+.right-box .send-button {
+    width: 80px;
+    height: 36px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    margin-top: -4px; /* Adjust margin to move button up */
+    background-color: #7289DA; /* Initial color for blurple */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s; /* Smooth animation for hover effect */
+}
+
+.right-box .send-button:hover {
+    background-color: var(--button-hover-color); /* Lighter shade for hover */
+}
+
+/* Invite button */
+.invite-btn {
+    background-color: #7289da; /* Blurple color */
+    text-decoration: none; /* Remove underline */
+    color: #fff; /* Text color */
+    font-size: 30px; /* Make text bigger */
+    transition: box-shadow 0.5s; /* Transition effect for box-shadow */
+    padding: 10px 20px; /* Add space around the text */
+    margin-right: 20px; /* Add space between buttons */
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+.invite-btn:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7); /* Shadow effect */
+}
+
+/* Login button */
+.login-btn {
+    background-color: #43b581; /* Green color */
+    text-decoration: none; /* Remove underline */
+    color: #fff; /* Text color */
+    font-size: 30px; /* Make text bigger */
+    transition: box-shadow 0.5s; /* Transition effect for box-shadow */
+    padding: 10px 20px; /* Add space around the text */
+    margin-right: 20px; /* Add space between buttons */
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+.login-btn:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7); /* Shadow effect */
+}
+
+/* About Versy button */
+.about-btn {
+    background-color: #f04747; /* Red color */
+    text-decoration: none; /* Remove underline */
+    color: #fff; /* Text color */
+    font-size: 30px; /* Make text bigger */
+    transition: box-shadow 0.5s; /* Transition effect for box-shadow */
+    padding: 10px 20px; /* Add space around the text */
+    margin-right: 20px; /* Add space between buttons */
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+.about-btn:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7); /* Shadow effect */
+}
+
+/* Custom buttons */
+.custom-btn {
+    /* Define common styling for custom buttons */
+    background-color: #808080; /* Default color */
+    text-decoration: none; /* Remove underline */
+    color: #fff; /* Text color */
+    font-size: 40px; /* Make text bigger */
+    transition: box-shadow 0.5s; /* Transition effect for box-shadow */
+    padding: 10px 50px; /* Add space around the text */
+    font-weight: 600;
+}
+
+.custom-btn:hover {
+    box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.7); /* Shadow effect */
+}
+
+.typing {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.disc_logo {
+    align-items: center;
+    height: 22px;
+    justify-content: center;
+    margin-right: 10px; /* Add space between the logo and text */
+}
+
+
+@keyframes fallFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.typing {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.button-container {
+    opacity: 0;
+    transform: translateX(50px); /* Initially move it to the right */
+    transition: opacity 1s ease, transform 1s ease; /* Transition for opacity and transform */
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateX(0); /* Move it back to its original position */
+}

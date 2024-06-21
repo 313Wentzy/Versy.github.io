@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #ffffff;
+    color: #000000;
+    user-select: none;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 30px;
+    color: #4d4444;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #7e7878;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #000000;
+}
+
+.home {
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home-content h3 {
+    position: absolute;
+    bottom: 50%;
+    right: 15%;
+    font-size: 90px;
+    font-weight: 1000;
+    color: #808080;
+    text-shadow: 0 0 140px #b4b4b4;
+    z-index: 100;
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 20px;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+}
+
+.invite-btn {
+    background-color: #7289da; /* Blurple color */
+    text-decoration: none; /* Remove underline */
+    color: #fff; /* Text color */
+    font-size: 30px; /* Make text bigger */
+    transition: box-shadow 0.5s; /* Transition effect for box-shadow */
+    padding: 10px 20px; /* Add space around the text */
+    margin-right: 20px; /* Add space between buttons */
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+.invite-btn:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7); /* Shadow effect */
+}
+
+.disc_logo {
+    align-items: center;
+    height: 22px;
+    justify-content: center;
+    margin-right: 10px; /* Add space between the logo and text */
+}
+
+.login-btn {
+    background-color: #43b581; /* Green color */
+    text-decoration: none; /* Remove underline */
+    color: #fff; /* Text color */
+    font-size: 30px; /* Make text bigger */
+    transition: box-shadow 0.5s; /* Transition effect for box-shadow */
+    padding: 10px 20px; /* Add space around the text */
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+.login-btn:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7); /* Shadow effect */
+}
+
+/* Existing styles */
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack items vertically */
+    margin-top: 50px;
+    opacity: 0; /* Set initial opacity to 0 */
+    animation: fadeFallIn 0.5s ease-in-out 0.5s forwards; /* Apply fade-in and fall-down animation */
+}
+
+.card-container {
+    position: relative;
+    width: 600px; /* Increased width */
+    height: 400px; /* Increased height */
+    perspective: 1000px; /* Perspective for 3D effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack cards on top of each other */
+    z-index: -100;
+}
+
+.card {
+    position: absolute;
+    width: 100%;
+    height: 160%;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+    backface-visibility: hidden;
+    font-size: 24px;
+    top: -20%;
+    right: -10%;
+    font-weight: 500;
+    z-index: -1; /* Ensure cards are stacked on top of each other */
+    transition: opacity 0.7s ease-in-out, transform 0.5s ease-in-out; /* Updated transition */
+}
+
+.card-navigation {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    bottom: 0%; /* Adjust the top position as needed */
+    right: 34.25%; /* Adjust the right position as needed */
+    opacity: 0; /* Set initial opacity to 0 */
+    animation: fadeFallIn 0.5s ease-in-out 1s forwards; /* Apply fade-in and fall-down animation with a delay */
+}
+
+.nav-button {
+    background-color: #808080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+    margin: 0 10px;
+}
+
+.nav-button:hover {
+    background-color: #5a5a5a;
+}
+.contact-me a {
+    position: absolute;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 5%;
+    right: 5%;
+    width: 200px;
+    height: 5%;
+    background: #808080;
+    border: 2px solid #808080;
+    border-radius: 6px;
+    font-size: 15.5px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: .5px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.contact-me a:hover {
+    color:#808080;
+}
+
+.contact-me a:nth-child(2) {
+    background: transparent;
+    color:#808080;
+}
+
+.contact-me a:nth-child(2):hover {
+    color: #000000;
+}
+
+.contact-me a:nth-child(2)::before {
+    background: #808080;
+}
+
+.contact-me a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ffffff;
+    z-index: -1;
+    transition: .3s;
+}
+
+.contact-me a:hover::before {
+    width: 100%;
+}
+
+@keyframes fadeFallIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.typing {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    z-index: 100;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.button-container {
+    opacity: 0;
+    transform: translateX(50px); /* Initially move it to the right */
+    transition: opacity 1s ease, transform 1s ease; /* Transition for opacity and transform */
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateX(0); /* Move it back to its original position */
+}
